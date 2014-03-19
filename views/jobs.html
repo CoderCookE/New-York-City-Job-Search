@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+  <div class = "container">
+		<div class="row">
+		            <div class="col-md-6">
+		            	<h1>Job Sites </h1>
+							  	{% for job in jobs %}
+							  	<h2><a href = {{job.link}}>{{job.title}}</a></h2>
+							  	<p>{{job.summary}}</p>
+							  	{% endfor %}
+		            </div>
+		            <div class="col-md-6">
+		            	<h1>Made In New York </h1>
+							  	{% for mInNyOne in mInNy %}
+							  	<h2><a href = {{job.link}}>{{mInNyOne.title}}</a></h2>
+							  	<p>{{mInNyOne.summary}}</p>
+							  	{% endfor %}
+		            </div>
+		        </div>
+		    </div>
+	</body>
+</html>
